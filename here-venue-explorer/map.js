@@ -2,7 +2,8 @@
 
   let platform = new H.service.Platform({
     'app_id':"ODGdDT8RMjZIW8ZfZWYg",
-    'app_code':"4bCmwoGSXYmKVjGmNGX1og"
+    'app_code':"4bCmwoGSXYmKVjGmNGX1og",
+    useHTTPS: true
     });
 
   let maptypes = platform.createDefaultLayers();
