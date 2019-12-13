@@ -26,12 +26,12 @@
 
   let buttonClick = evt => {
     document.querySelector("button").addEventListener('click', async evt => {
-      let signature_url = "http://signature.venue.maps.api.here.com/venues/signature/v1?app_id=ODGdDT8RMjZIW8ZfZWYg&app_code=4bCmwoGSXYmKVjGmNGX1og"
+      let signature_url = "https://signature.venue.maps.api.here.com/venues/signature/v1?app_id=ODGdDT8RMjZIW8ZfZWYg&app_code=4bCmwoGSXYmKVjGmNGX1og"
       
       let response = await fetch(signature_url)
       let signature = await response.json()
 
-      let model_full_response = await fetch(`http://static-3.venue.maps.api.here.com/1/models-full/${evt.target.id}.json${signature.SignedQueryString}`)
+      let model_full_response = await fetch(`https://static-3.venue.maps.api.here.com/1/models-full/${evt.target.id}.json${signature.SignedQueryString}`)
       let model_full = await model_full_response.json()
       
       alert(JSON.stringify(model_full))
@@ -76,12 +76,12 @@
   }
 
   async  function getVenueIndexes () {
-    let signature_url = "http://signature.venue.maps.api.here.com/venues/signature/v1?app_id=ODGdDT8RMjZIW8ZfZWYg&app_code=4bCmwoGSXYmKVjGmNGX1og"
+    let signature_url = "https://signature.venue.maps.api.here.com/venues/signature/v1?app_id=ODGdDT8RMjZIW8ZfZWYg&app_code=4bCmwoGSXYmKVjGmNGX1og"
     
     let response = await fetch(signature_url)
     let signature = await response.json()
 
-    let venue_indexes_response = await fetch(`http://static-3.venue.maps.api.here.com/1/models-full/index_bb.json${signature.SignedQueryString}`)
+    let venue_indexes_response = await fetch(`https://static-3.venue.maps.api.here.com/1/models-full/index_bb.json${signature.SignedQueryString}`)
     let venue_indexes = await venue_indexes_response.json()
 
     let dataPoints = venue_indexes.map(item => {
