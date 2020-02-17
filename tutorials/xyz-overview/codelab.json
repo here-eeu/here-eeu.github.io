@@ -1,0 +1,33 @@
+{
+  "environment": "web",
+  "source": "155GKyGWTVuHLTNfAz-p6W_lE8PyWBSYTrJS8tH6yrB8",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-11-14T14:32:24Z",
+  "id": "xyz-overview",
+  "duration": 0,
+  "title": "HERE XYZ Overview",
+  "author": "Maksim Makarov",
+  "summary": "Develop XYZ Map for Urban Mobility",
+  "theme": "web",
+  "status": [
+    "production"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "cds17",
+    "chrome-dev-summit-2016",
+    "gdd17",
+    "io2016",
+    "io2017",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "typtwd17",
+    "web"
+  ],
+  "url": "xyz-overview"
+}
