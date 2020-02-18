@@ -1,0 +1,288 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>HERE JavaScript Maps API</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="HERE JavaScript Maps API"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <h3><img style="max-width: 750.50px" src="img\76c8bc433887920c.png"></h3>
+<h2 class="checklist">What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>How to create interactive web map</li>
+<li>How to upload data to XYZ Hub</li>
+<li>How to get geojson data from XYZ Hub via API </li>
+<li>How to visualize geojson layer via JavaScript Maps API </li>
+<li>How to open InfoBubble on mouse click</li>
+</ul>
+<aside class="warning"><p><strong>Important</strong>!</p>
+<p>You need to have developer credentials to continue this course! Click button to create <a href="http://her.is/eeu" target="_blank"><paper-button class="colored" raised>Freemium Plan</paper-button></a></p>
+</aside>
+<aside class="special"><p><strong>Useful links</strong></p>
+<ul>
+<li>HERE Studio: <a href="https://xyz.here.com/" target="_blank">https://xyz.here.com/</a></li>
+<li>JavaScript Maps Examples: <a href="https://developer.here.com/documentation/examples/maps-js" target="_blank">https://developer.here.com/documentation/examples/maps-js</a></li>
+<li>Open InfoBubble: <a href="https://bit.ly/2UXUdiD" target="_blank">https://bit.ly/2UXUdiD</a></li>
+<li>XYZ Spaces with javaScript: <a href="https://bit.ly/3bKhD12" target="_blank">https://bit.ly/3bKhD12</a> </li>
+<li>XYZ Documentation: <a href="https://www.here.xyz/studio/" target="_blank">https://www.here.xyz/studio/</a></li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Interactive web map" duration="0">
+        <p>Download basic application template which contains empty files: </p>
+<ul>
+<li><strong>index.html</strong></li>
+<li><strong>assets/css/style.css</strong></li>
+<li><strong>assets/js/map.js</strong></li>
+</ul>
+<p><a href="https://github.com/here-eeu/here-eeu.github.io/raw/master/tutorials/templates/here-js-maps-api-template.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download application template</paper-button></a></p>
+<p>Copy and paste code below into your <strong>index.html</strong>:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes&#34;&gt;
+    &lt;meta http-equiv=&#34;Content-type&#34; content=&#34;text/html;charset=UTF-8&#34;&gt;
+    
+    &lt;title&gt;Serbia Basic Map&lt;/title&gt;
+    
+    &lt;!-- HERE Core Styles --&gt;
+    &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://js.api.here.com/v3/3.1/mapsjs-ui.css&#34; /&gt;
+
+    &lt;!-- HERE Core modules --&gt;
+    &lt;script type=&#34;text/javascript&#34; src=&#34;https://js.api.here.com/v3/3.1/mapsjs-core.js&#34;&gt;&lt;/script&gt;
+    &lt;script type=&#34;text/javascript&#34; src=&#34;https://js.api.here.com/v3/3.1/mapsjs-service.js&#34;&gt;&lt;/script&gt;
+    &lt;script type=&#34;text/javascript&#34; src=&#34;https://js.api.here.com/v3/3.1/mapsjs-ui.js&#34;&gt;&lt;/script&gt;
+    &lt;script type=&#34;text/javascript&#34; src=&#34;https://js.api.here.com/v3/3.1/mapsjs-mapevents.js&#34;&gt;&lt;/script&gt;
+    &lt;script type=&#34;text/javascript&#34; src=&#34;https://js.api.here.com/v3/3.1/mapsjs-data.js&#34;&gt;&lt;/script&gt;
+
+    &lt;!-- Custom style.css file --&gt;
+    &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;./assets/css/style.css&#34; /&gt;
+  &lt;/head&gt;
+    &lt;body&gt;
+      &lt;!-- Render map to container --&gt;
+      &lt;div id=&#34;map&#34;&gt;&lt;/div&gt;
+
+      &lt;!-- Custom javascript file with map logic --&gt;
+      &lt;script type=&#34;text/javascript&#34; src=&#34;./assets/js/map.js&#34;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Next step add styles to our application. Let&#39;s make our map full screen. Open <strong>style.css</strong> and add some styles:</p>
+<pre><code>html, body, #map {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: grey;
+}</code></pre>
+<p>Last step is to modify <strong>map.js</strong> file and write some javascript logic:</p>
+<pre><code>(function () {
+  
+    //Step 1: initialize communication with the platform
+    let platform = new H.service.Platform({
+      apikey: &#34;YOUR_APIKEY&#34;
+    })
+  
+  
+    let defaultLayers = platform.createDefaultLayers()
+  
+    //Step 2: initialize a map.
+    let map = new H.Map(document.getElementById(&#39;map&#39;),
+      defaultLayers.vector.normal.map, {
+        pixelRatio: window.devicePixelRatio || 1
+      })
+
+    // add a resize listener to make sure that the map occupies the whole container
+    window.addEventListener(&#39;resize&#39;, () =&gt; map.getViewPort().resize())
+  
+    map.setCenter({lat: 44.008620115415354, lng: 20.7861328125})
+    map.setZoom(7)
+  
+    //Step 3: make the map interactive
+    // MapEvents enables the event system
+    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+    let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map))
+  
+    // Create the default UI components
+    let ui = H.ui.UI.createDefault(map, defaultLayers)
+
+}())</code></pre>
+<p>Try to run <strong>index.html</strong>. If everything done well you would see map in web browser:</p>
+<p><img style="max-width: 739.50px" src="img\f3788cd4340b4ea9.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Upload data to XYZ Hub" duration="0">
+        <p>We are going to visualize Serbia&#39;s administrative boundary, cities, towns and small villages.</p>
+<p>Let&#39;s download spatial datasets <a href="https://github.com/here-eeu/here-eeu.github.io/raw/master/tutorials/templates/datasets.zip" target="_blank"><paper-button class="colored" raised>Dataset for Serbia</paper-button></a></p>
+<p><img style="max-width: 743.50px" src="img\849ac371ba6cc977.png"></p>
+<p>Next step is to upload all layers to the geospatial cloud. For this task we can use <a href="https://xyz.here.com/" target="_blank">HERE Studio</a>. </p>
+<p><strong>You don&#39;t need to register a new account</strong> just use your <a href="https://developer.here.com/" target="_blank">dev portal</a> credentials.</p>
+<p>Then open <strong>Projects</strong> and <strong>Create new Project:</strong></p>
+<p><img style="max-width: 743.50px" src="img\eb34a599fee8a609.png"></p>
+<p>Select <strong>+Data</strong> button to open data management window and click <strong>Upload</strong>:</p>
+<p><img style="max-width: 743.09px" src="img\a7b2ca2031ed6bf8.png"></p>
+<p>Last step is to upload data to cloud:</p>
+<p><img style="max-width: 747.03px" src="img\9d2eeaef0030887f.png"></p>
+<p>Then we just click the <strong>Add datasets</strong> button to see our data on the map.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Access data via API" duration="0">
+        <p>Each space like a database has its own unique identifier <strong>SPACE_ID</strong> which we can use to load data from the account. And of course all data in the hub is private. </p>
+<p>We need to have <strong>ACCESS_TOKEN</strong> to get, read, write or update data in the cloud via REST API.</p>
+<p>All this info we can find in the <strong>Token Management</strong> admin panel - <a href="https://xyz.api.here.com/token-ui/" target="_blank">https://xyz.api.here.com/token-ui/</a> </p>
+<p>(there are docs about it <a href="https://www.here.xyz/api/getting-token/" target="_blank">https://www.here.xyz/api/getting-token/</a>).</p>
+<p>To make it easier we will generate full access token for all layers:</p>
+<p><img style="max-width: 736.50px" src="img\592acfdadeb518f6.png"></p>
+<p>And click <strong>Generate token</strong> button:</p>
+<p><img style="max-width: 734.50px" src="img\694faa9ca0647234.png"></p>
+<p>Then we can copy <strong>ACCESS_TOKEN</strong> from the notification message or find it at <strong>Manage Tokens</strong> panel:</p>
+<p><img style="max-width: 731.50px" src="img\65a01ea28853bda0.png"></p>
+<p>Now we know where to get <strong>SPACE_ID</strong> and <strong>ACCESS_TOKEN</strong> and we are able to add this layer to our web map in javascript code.</p>
+<p>You can test it by creating URL with custom identifiers:</p>
+<p><strong><code>https://xyz.api.here.com/hub/spaces/SPACE_ID/iterate?access_token=ACCESS_TOKEN</code></strong></p>
+<p>If you open this link in new browser tab you would see response from the server with data:</p>
+<p><img style="max-width: 720.50px" src="img\d7989fda49e936c6.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add XYZ Space to JavaScript map" duration="0">
+        <p>Let&#39;s add to our javascript code in map.js these lines of code:</p>
+<pre><code>(function () {
+  
+    ...
+
+    // Initialize connection with HERE XYZ Hub
+    const service = platform.getXYZService({
+        token: &#34;ACCESS_TOKEN&#34;
+    })
+
+    // Set data layer provider by SPACE_ID
+    const spaceProvider = new H.service.xyz.Provider(service, &#34;SPACE_ID&#34;)
+
+    // Create tile layer
+    const spaceLayer = new H.map.layer.TileLayer(spaceProvider)
+
+    // get the style for the layer
+    var style = spaceProvider.getStyle()
+
+    // change the color of the polygons
+    style.setProperty(&#39;layers.xyz.polygons.draw.polygons.color&#39;, &#39;orange&#39;)
+
+    style.setInteractive([&#39;xyz&#39;], true)
+
+    // Add layer to the map
+    map.addLayer(spaceLayer)
+
+
+}())</code></pre>
+<p>Try to run <strong>index.html</strong>:</p>
+<p><img style="max-width: 722.50px" src="img\eb07179435e34317.png"></p>
+<p>Final step is to add InfoBubble on mouse click:</p>
+<pre><code>(function () {
+  
+    ...
+
+    let hoveredObject
+    let infoBubble = new H.ui.InfoBubble({lat: 0, lng: 0}, {})
+    infoBubble.addClass(&#39;info-bubble&#39;)
+    infoBubble.close()
+    ui.addBubble(infoBubble)
+    
+    spaceProvider.addEventListener(&#39;tap&#39;, (evt) =&gt; {
+        // debugger
+        console.log(evt.target.getData())
+        if (hoveredObject &amp;&amp; hoveredObject !== evt.target) {
+            infoBubble.close()
+        }
+    
+        hoveredObject = evt.target;
+        let pos = map.screenToGeo(
+            evt.currentPointer.viewportX,
+            evt.currentPointer.viewportY)
+        infoBubble.setPosition(pos)
+        infoBubble.setContent(`
+            &lt;div class=&#34;info-bubble-label&#34;&gt;
+               ${evt.target.getData().properties[&#34;properties.name&#34;]} &lt;br /&gt;
+               &lt;hr/&gt;
+               ${evt.target.getData().properties[&#34;properties.website&#34;]} &lt;br /&gt;
+            &lt;/div&gt;`)
+        infoBubble.open()
+    })
+
+}())</code></pre>
+<p>And our result is opening info bubble on administrative boundary click:</p>
+<p><img style="max-width: 715.50px" src="img\d866f94ef43bf6b5.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="FAQ" duration="0">
+        <p><strong>Frequently Asked Questions</strong></p>
+<ul>
+<li><a href="http://download.geofabrik.de/" target="_blank">Where to get the data?</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/here-api" target="_blank">Technical issues with API?</a></li>
+<li><a href="https://www.here.xyz/api/" target="_blank">Problems with SPACE_ID and ACCESS_TOKEN?</a></li>
+<li><a href="https://developer.here.com/documentation/maps/dev_guide/index.html" target="_blank">Where to find more examples with JavaScript API?</a></li>
+<li><a href="https://www.here.xyz/api/concepts/geojsonbasics/" target="_blank">What is GeoJson?</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

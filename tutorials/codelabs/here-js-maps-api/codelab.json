@@ -1,0 +1,33 @@
+{
+  "environment": "web",
+  "source": "1VLz93IkXJbVusbq-jFIf9_gI6HjvqymVS_IZGF4Zlj4",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-02-18T10:40:04Z",
+  "id": "here-js-maps-api",
+  "duration": 0,
+  "title": "HERE JavaScript Maps API",
+  "author": "Maksim Makarov",
+  "summary": "HERE JavaScript Maps API",
+  "theme": "web",
+  "status": [
+    "production"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "cds17",
+    "chrome-dev-summit-2016",
+    "gdd17",
+    "io2016",
+    "io2017",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "typtwd17",
+    "web"
+  ],
+  "url": "here-js-maps-api"
+}
