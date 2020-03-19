@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/here-hospital-analytics-tool/precache-manifest.2d416c559aca4bf98ff221f9792eacfb.js"
+  "/here-hospital-analytics-tool/precache-manifest.dcb29d3d1c35309cc27da217afb1ade6.js"
 );
 
 self.addEventListener('message', (event) => {
