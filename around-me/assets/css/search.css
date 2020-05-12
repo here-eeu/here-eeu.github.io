@@ -1,0 +1,123 @@
+
+body {
+    background-image: linear-gradient(to right , white , white);
+}
+
+.searchBox {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+
+	background-color: white;
+    transition: all .5s;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+
+
+    
+    
+
+	justify-content: center;
+	align-items: center;
+	border: 1px solid grey;
+	box-shadow: 0px 0 4px 0 rgba(15, 22, 33, 0.4);
+    /*background-color:transparent;*/
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 300px;
+    padding: 0 3px;
+    vertical-align: middle;
+}
+
+.searchBox:hover > .searchButton {
+	background: white;
+	color : white;
+	background:url('./icons/search.png') no-repeat center;
+	background-size: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 15%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	transition: 0.4s;
+    background:url('./icons/search.png') no-repeat center;
+    color: rgba(15, 22, 33, 0.8);
+	background-size: 20px;
+	padding: 0;
+	border: none;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+	width: 0px;
+	justify-content: center;
+	align-items: center;
+    vertical-align: middle;
+    direction:rtl;
+    text-align: left;
+    unicode-bidi: plaintext;
+    text-overflow: ellipsis;  
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+/*Auto Complete Search list*/
+.ui-autocomplete {
+    position: absolute;
+    width: 220px;
+	top: 0;
+	left: 0;
+    cursor: default;
+    border-top: 3px solid #bbb;
+    border-radius: 15px;
+}
+
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+    margin: -1px;
+    background-color: #DCDCDC;
+    color: black;
+    border-width: 0px;
+    border-radius: 15px; 
+}
+
+
+@media screen and (max-width: 1095px) {
+    
+.searchBox{
+
+    margin-top: 45px;
+    margin-left: -16px;
+    
+
+
+}
+}
+
+
+

@@ -1,0 +1,235 @@
+html, body,#map {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+#geolocation {
+	position: absolute;
+	border: 1px solid grey;
+	padding: 5px;
+	height: 30px;
+	width: 30px;
+	border-radius: 5px;
+	z-index: 1000;
+	bottom: 175px;
+	right: 24px;
+	color: grey;
+	background: white;
+	display: flex;
+  	justify-content: center;
+	align-items: center;
+	background: url('./icons/current-location.png') no-repeat center;	
+	opacity: 1;
+	background-size: 25px;
+	box-shadow: 0px 0 4px 0 rgba(15, 22, 33, 0.4);
+	background-color: white;
+}
+
+#geolocation:hover {
+	background: grey;
+	color: white;
+	cursor: pointer;
+	display: flex;
+  	justify-content: center;
+	align-items: center;
+	background:url('./icons/current-location.png') no-repeat center;
+	background-size: 25px;
+	background-color: white;
+}
+
+
+#view3D {
+	position: absolute;
+	padding: 5px;
+	height: 30px;
+	width: 30px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	z-index: 1000;
+	bottom: 230px;
+	right: 24px;
+	color: grey;
+	background: white;
+	display: flex;
+  	justify-content: center;
+	align-items: center;
+	background:rgba(15, 22, 33, 0.4) url('./icons/earth.png') no-repeat center;
+	opacity: 1;
+	background-size: 25px;
+	box-shadow: 0px 0 4px 0 rgba(15, 22, 33, 0.4);
+	background-color: white;
+}
+
+#view3D:hover {
+	background: grey;
+	color: white;
+	cursor: pointer;
+	display: flex;
+  	justify-content: center;
+	align-items: center;
+	background:url('./icons/earth.png') no-repeat center;
+	background-size: 25px;
+	background-color: white;
+}
+
+
+#nightmode {
+	position: absolute;
+	padding: 5px;
+	height: 30px;
+	width: 30px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	z-index: 1000;
+	bottom: 285px;
+	right: 24px;
+	color: grey;
+	background: white;
+	display: flex;
+  	justify-content: center;
+	align-items: center;
+	background:rgba(15, 22, 33, 0.4) url('./icons/day.png') no-repeat center;
+	opacity: 1;
+	background-size: 35px;
+	box-shadow: 0px 0 4px 0 rgba(15, 22, 33, 0.4);
+	background-color: white;
+}
+
+#nightmode:hover {
+	background: grey;
+	color: white;
+	cursor: pointer;
+	display: flex;
+  	justify-content: center;
+	align-items: center;
+	background:url('./icons/day.png') no-repeat center;
+	background-size: 35px;
+	background-color: white;
+}
+
+
+#layerbutton-1,#layerbutton-2,#layerbutton-3,#layerbutton-4,#layerbutton-5,#layerbutton-6,#layerbutton-7,#layerbutton-8{
+	/*Historical places*/
+	border: 1px solid grey;
+	border-radius: 5px;
+	width: 30px;
+	box-shadow: 0px 0 4px 0 rgba(15, 22, 33, 0.4);
+	position: absolute;
+	
+}
+
+#layerbutton-1{
+	/*Historical places*/
+  	top: 30%;
+	left: 1%;
+	background:url('./icons/museum.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+#layerbutton-2{
+	/*information places*/
+  	top: 37%;
+	left: 1%;
+	background:url('./icons/info.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+#layerbutton-3{
+	/*park places*/
+  	top: 44%;
+	left: 1%;
+	background:url('./icons/hotel.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+#layerbutton-4{
+	/*finance services*/
+  	top: 51%;
+	left: 1%;
+	background:url('./icons/bank.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+#layerbutton-5{
+	/*health services*/
+  	top: 58%;
+	left: 1%;
+	background:url('./icons/hospital.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+#layerbutton-6{
+	/*intertainment sevices*/
+  	top: 65%;
+	left: 1%;
+	background:url('./icons/glasses.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+#layerbutton-7{
+	/*shopping services*/
+  	top: 72%;
+	left: 1%;
+	background:url('./icons/buying.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+#layerbutton-8{
+	/*transportation services*/
+  	top: 79%;
+	left: 1%;
+	background:url('./icons/bus.png') no-repeat center;
+	background-size: 25px;
+	background-color: #FFFFFF;
+}
+
+
+input {
+	position: relative;
+	display: inline-block;
+	margin: 7px 0 7px 0;
+	left: 20px;
+	z-index: 2;
+	width: 200px;
+	height: 22px;
+}
+
+pre div, span div {
+	position: relative;
+	display: inline-block;
+	left: 20px;
+	background-color: #373D49;
+	color: #FFFFFF;
+	padding: 10px;
+	margin: 0 0 0 0;
+	font-family: 'LFira Sans',Arial,Helvetica,sans-serif;
+}
+
+pre .properties{
+	max-width: 50%;
+	overflow-x: auto;
+}
+
+a.button {
+	position: relative;
+	display: block;
+	color: #FFFFFF;
+	cursor: pointer;
+	left: 20px;
+	height: 23px;
+	padding: 5px 6px 0px;
+	width: 20px;
+	text-align: center;
+	margin: 12px 0 0 0;
+	background-color: white;
+}
+a.button:hover{
+	background-color: #212429;
+}
+
+

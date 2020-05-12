@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+    <title>Around Me</title>
+    
+    <!-- HERE Core Styles -->
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!--cluster-->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-clustering.js"
+    type="text/javascript" charset="utf-8"></script>
+
+    <!-- HERE Core modules -->
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-data.js"></script>
+
+    <!-- Custom style.css file -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bubble.css">
+  </head>
+    <body>
+      <!-- Render map to container -->
+      <div id="map"></div>
+      <div id="geolocation" title="Go to your current location"></div>
+      <div id="view3D" title="3D View"></div>
+      <!--<div id="nightmode" title="Dark Map & Light Map"></div> -->
+
+      <!-- Menu -->
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header>🗺 Around Me</header>
+        <ul>
+        <li><a href="about.html" target="_blank"><i class="far fa-question-circle"></i>About</a></li>
+        <li><a href="feedback.html" target="_blank"><i class="far fa-envelope"></i>Feedback</a></li>
+        </ul>
+      </div>
+      <section>   
+      </section>
+
+      <!-- Search box -->
+      <div class="searchBox" id="searchBox" data-tut="search-box">
+        <input class="searchInput"type="text" id= "placeSearch" placeholder="Search">
+        <button class="searchButton" href="#"><i class="material-icons"></i></button>
+      </div>
+
+      <!-- Show-hide layers buttons -->
+      <div>
+        <a id="layerbutton-1" class="button" title="Historical Monuments & Museums"></a>
+        <a id="layerbutton-2" class="button" title="Attractions & Tourist Information"></a>
+        <a id="layerbutton-3" class="button" title="Hotel"></a>
+        <a id="layerbutton-4" class="button" title="ATM"></a>
+        <a id="layerbutton-5" class="button" title="Hospitals & Pharmacies"></a>
+        <a id="layerbutton-6" class="button" title="Amusement Park & Animal Park & Nightlife & Park/Recreation Area & Cinema"></a>
+        <a id="layerbutton-7" class="button" title="Coffee Shop & Grocery Store & Restaurant & Shopping"></a>
+        <a id="layerbutton-8" class="button" title="Bus Stations & Train Stations"></a>
+      </div>
+
+      <!-- Custom javascript file with map logic -->
+      <script type="text/javascript" src="./assets/js/map.js"></script>
+      <script type="text/javascript" src="./assets/js/geolocation.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script type="text/javascript" src="./assets/js/search.js"></script>
+      <script type="text/javascript" src="./assets/js/menu.js"></script>
+      <script type="text/javascript" src="./assets/js/menu-move.js"></script>
+      <script type="text/javascript" src="./assets/js/add-layers.js"></script>
+      <script type="text/javascript" src="./assets/js/show-hide-layers.js"></script>
+
+  </body>
+</html>
