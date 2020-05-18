@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/here4life/static/css/main.da617f67.chunk.css",
-    "main.js": "/here4life/static/js/main.4e8d98ae.chunk.js",
-    "main.js.map": "/here4life/static/js/main.4e8d98ae.chunk.js.map",
+    "main.js": "/here4life/static/js/main.7c8126ec.chunk.js",
+    "main.js.map": "/here4life/static/js/main.7c8126ec.chunk.js.map",
     "runtime-main.js": "/here4life/static/js/runtime-main.e031bfea.js",
     "runtime-main.js.map": "/here4life/static/js/runtime-main.e031bfea.js.map",
     "static/css/2.de424728.chunk.css": "/here4life/static/css/2.de424728.chunk.css",
     "static/js/2.b4b3bcfc.chunk.js": "/here4life/static/js/2.b4b3bcfc.chunk.js",
     "static/js/2.b4b3bcfc.chunk.js.map": "/here4life/static/js/2.b4b3bcfc.chunk.js.map",
     "index.html": "/here4life/index.html",
-    "precache-manifest.d11676a095fcd6dfa710ea5f6b73c8a5.js": "/here4life/precache-manifest.d11676a095fcd6dfa710ea5f6b73c8a5.js",
+    "precache-manifest.dd74b63b6482da5d1ac041dc1b98baf2.js": "/here4life/precache-manifest.dd74b63b6482da5d1ac041dc1b98baf2.js",
     "service-worker.js": "/here4life/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/here4life/static/css/2.de424728.chunk.css.map",
     "static/css/main.da617f67.chunk.css.map": "/here4life/static/css/main.da617f67.chunk.css.map",
@@ -24,6 +24,6 @@
     "static/css/2.de424728.chunk.css",
     "static/js/2.b4b3bcfc.chunk.js",
     "static/css/main.da617f67.chunk.css",
-    "static/js/main.4e8d98ae.chunk.js"
+    "static/js/main.7c8126ec.chunk.js"
   ]
 }
