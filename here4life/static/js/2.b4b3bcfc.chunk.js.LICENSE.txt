@@ -1,0 +1,279 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*!
+ <lui-button>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-checkbox>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-desktoplayer-theme>, <lui-contextchromelayer-theme>, <lui-canvaslayer-theme>, <lui-contentchromelayer-theme>, <lui-brandmembranelayer-theme>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-label>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-logo>, <lui-productlogo>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-menu>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-navigation>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-overlay>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-radiobutton>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-search>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-spinner>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ <lui-tabbar>, <lui-tab>
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ Initializes LUI in the browser
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!
+ Webfonts for LUI (FiraGo, Fira Mono)
+ Version: 3.0.0-beta.5
+
+ Copyright (C) 2020 HERE Global B.V. and its affiliate(s).
+ All rights reserved.
+
+ This software and other materials contain proprietary information
+ controlled by HERE and are protected by applicable copyright legislation.
+ Any use and utilization of this software and other materials and
+ disclosure to any third parties is conditional upon having a separate
+ agreement with HERE for the access, use, utilization or disclosure of this
+ software. In the absence of such agreement, the use of the software is not
+ allowed.
+*/
+
+/*!***************************************************
+        * mark.js v8.11.1
+        * https://markjs.io/
+        * Copyright (c) 2014–2018, Julian Kühnel
+        * Released under the MIT license https://git.io/vwTVl
+        *****************************************************/
+
+/**
+          @license @nocompile
+          Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+          This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+          The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+          The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+          Code distributed by Google as part of the polymer project is also
+          subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+          */
+
+/** @license React v0.19.1
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
