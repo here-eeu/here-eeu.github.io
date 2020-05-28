@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/here4life/static/css/main.d65a680b.chunk.css",
-    "main.js": "/here4life/static/js/main.d5d5af81.chunk.js",
-    "main.js.map": "/here4life/static/js/main.d5d5af81.chunk.js.map",
+    "main.js": "/here4life/static/js/main.686e588c.chunk.js",
+    "main.js.map": "/here4life/static/js/main.686e588c.chunk.js.map",
     "runtime-main.js": "/here4life/static/js/runtime-main.5b59eec0.js",
     "runtime-main.js.map": "/here4life/static/js/runtime-main.5b59eec0.js.map",
     "static/css/2.de424728.chunk.css": "/here4life/static/css/2.de424728.chunk.css",
-    "static/js/2.b2b9b43a.chunk.js": "/here4life/static/js/2.b2b9b43a.chunk.js",
-    "static/js/2.b2b9b43a.chunk.js.map": "/here4life/static/js/2.b2b9b43a.chunk.js.map",
+    "static/js/2.5ee086d2.chunk.js": "/here4life/static/js/2.5ee086d2.chunk.js",
+    "static/js/2.5ee086d2.chunk.js.map": "/here4life/static/js/2.5ee086d2.chunk.js.map",
     "index.html": "/here4life/index.html",
-    "precache-manifest.d79d5ba7068f12512d8114998f52e2e4.js": "/here4life/precache-manifest.d79d5ba7068f12512d8114998f52e2e4.js",
+    "precache-manifest.4929b727a06e27c08600423315c412a9.js": "/here4life/precache-manifest.4929b727a06e27c08600423315c412a9.js",
     "service-worker.js": "/here4life/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/here4life/static/css/2.de424728.chunk.css.map",
     "static/css/main.d65a680b.chunk.css.map": "/here4life/static/css/main.d65a680b.chunk.css.map",
-    "static/js/2.b2b9b43a.chunk.js.LICENSE.txt": "/here4life/static/js/2.b2b9b43a.chunk.js.LICENSE.txt",
+    "static/js/2.5ee086d2.chunk.js.LICENSE.txt": "/here4life/static/js/2.5ee086d2.chunk.js.LICENSE.txt",
     "static/media/LUI-icon-pd-chevron_down-solid-16.svg": "/here4life/static/media/LUI-icon-pd-chevron_down-solid-16.2186a203.svg",
     "static/media/LUI-icon-pd-chevron_left_double-solid-24.svg": "/here4life/static/media/LUI-icon-pd-chevron_left_double-solid-24.79559244.svg",
     "static/media/isoline-icon.svg": "/here4life/static/media/isoline-icon.f6f6175d.svg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.5b59eec0.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.b2b9b43a.chunk.js",
+    "static/js/2.5ee086d2.chunk.js",
     "static/css/main.d65a680b.chunk.css",
-    "static/js/main.d5d5af81.chunk.js"
+    "static/js/main.686e588c.chunk.js"
   ]
 }
