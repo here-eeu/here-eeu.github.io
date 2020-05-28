@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6affc4133647c9e3fc09475af28e7b5b",
+    "revision": "cdf60906bc9496f924ae88a0b666a979",
     "url": "/here4life/index.html"
   },
   {
-    "revision": "1104044b01de27de48c3",
+    "revision": "d3df994135029981cc48",
     "url": "/here4life/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "6ce92fb541ef9febd125",
-    "url": "/here4life/static/css/main.7f1692a2.chunk.css"
+    "revision": "2782033a840ab5adc4da",
+    "url": "/here4life/static/css/main.d65a680b.chunk.css"
   },
   {
-    "revision": "1104044b01de27de48c3",
-    "url": "/here4life/static/js/2.c32b684e.chunk.js"
+    "revision": "d3df994135029981cc48",
+    "url": "/here4life/static/js/2.5ee086d2.chunk.js"
   },
   {
     "revision": "37d8fdf4eff4b57362828cdd2d9d5ca9",
-    "url": "/here4life/static/js/2.c32b684e.chunk.js.LICENSE.txt"
+    "url": "/here4life/static/js/2.5ee086d2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ce92fb541ef9febd125",
-    "url": "/here4life/static/js/main.3c2cda96.chunk.js"
+    "revision": "2782033a840ab5adc4da",
+    "url": "/here4life/static/js/main.a79d6bce.chunk.js"
   },
   {
     "revision": "59d428dc79b23a4ef177",
