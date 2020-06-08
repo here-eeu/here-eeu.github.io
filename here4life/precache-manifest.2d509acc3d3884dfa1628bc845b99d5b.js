@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cdf60906bc9496f924ae88a0b666a979",
+    "revision": "49e738aacd7e009bbcbe1e71a467e2d3",
     "url": "/here4life/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/here4life/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "2782033a840ab5adc4da",
+    "revision": "3e396ca9b80b0adfe0aa",
     "url": "/here4life/static/css/main.d65a680b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/here4life/static/js/2.5ee086d2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2782033a840ab5adc4da",
-    "url": "/here4life/static/js/main.a79d6bce.chunk.js"
+    "revision": "3e396ca9b80b0adfe0aa",
+    "url": "/here4life/static/js/main.c970102d.chunk.js"
   },
   {
     "revision": "59d428dc79b23a4ef177",
